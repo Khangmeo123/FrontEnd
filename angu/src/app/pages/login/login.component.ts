@@ -27,7 +27,13 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     if (this.profile.valid) {
-      alert('go to home page');
+      let name = this.profile.get('name').value;
+      let password = this.profile.get('password').value;
+      if(name == "test" && password == "test"){
+        location.href='/home'
+      } else{
+        alert('your name should is "test" and password too!')
+      }
     }
     else {
       this.validateAllFields(this.profile);

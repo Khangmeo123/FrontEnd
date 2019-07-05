@@ -1,7 +1,10 @@
 <div class="container">
+        <h3 class="alert alert-primary mt-2" style="text-align: center" >LOGIN ACCOUNT</h3>
     <form [formGroup]="profile" (ngSubmit)="onSubmit()">
         <app-input-name [name]="name" [profile] = "profile"  ></app-input-name>
         <app-input-password [password] = "password" [profile] = "profile"  ></app-input-password>
         <button type="submit" class="btn btn-primary mr-2">log in</button>  
     </form>
+    <h6 class="alert alert-danger mt-2">If you dont have an account, please create account </h6>
+    <button class="btn btn-outline-primary" routerLink='/sign-up'> Create Account</button>
 </div>

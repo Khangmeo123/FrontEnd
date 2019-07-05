@@ -37,7 +37,8 @@ export class SignUpComponent implements OnInit {
   }
   onSubmit(){
     if(this.profile.valid){
-      alert('CREATE ACCOUT SUCCESS : name:' + this.profile.get('name').value + ' email: '+ this.profile.get('email').value+' address: '+this.profile.get('address').value +' tel: '+this.profile.get('tel').value);
+      // alert('CREATE ACCOUT SUCCESS : name:' + this.profile.get('name').value + ' email: '+ this.profile.get('email').value+' address: '+this.profile.get('address').value +' tel: '+this.profile.get('tel').value);
+      location.href='/login';
     }
     else{
       this.validateAllFields(this.profile);
