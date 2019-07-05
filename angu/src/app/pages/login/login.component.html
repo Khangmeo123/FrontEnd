@@ -1,0 +1,7 @@
+<div class="container">
+    <form [formGroup]="profile" (ngSubmit)="onSubmit()">
+        <app-input-name [name]="name" [profile] = "profile"  ></app-input-name>
+        <app-input-password [password] = "password" [profile] = "profile"  ></app-input-password>
+        <button type="submit" class="btn btn-primary mr-2">log in</button>  
+    </form>
+</div>
