@@ -1,1 +1,59 @@
-<p>home works!</p>
+<div class="container">
+  <h5 id="title">HOME PAGE</h5>
+  <br><br>
+  <div>
+    <h3>choice option</h3>
+  </div>
+  <form [formGroup]="yourChosen" (ngSubmit)="onSubmit()" id="homeForm">
+    <div class="input-group" class="form-group">
+      <select class="custom-select" class="form-control" formControlName="select" required id="selectBox" aria-label="Example select with button addon">
+        <option  value="1">about</option>
+        <option  value="2">contact</option>
+        <option  value="3">login</option>
+        <option  value="4">sign-up</option>
+      </select>
+      <div class="mt-2" *ngIf="select.invalid && (select.dirty || select.touched)">
+          <div class="alert alert-danger">
+            select is required.
+          </div>
+      </div>
+    </div>
+
+    <br>
+
+    <label class="form-check-label">
+      <input class="form-check-input " formControlName="radio" name="radio" value="1" required type="radio" id="1">
+      i love you
+    </label>
+    <br>
+    <label class="form-check-label">
+      <input class="form-check-input " formControlName="radio" name="radio" value="2" type="radio" id="2">
+      you love me?
+    </label>
+    <br>
+    <label class="form-check-label">
+      <input class="form-check-input " formControlName="radio" name="radio" value="3" type="radio" id="3">
+      => we love together S2!
+    </label>
+
+    <div class="mt-2" *ngIf="(radio.invalid && (radio.dirty || radio.touched))">
+        <div class="alert alert-danger">
+          check radio is required.
+        </div>
+    </div>
+    <!-- html date picker -->
+    <br>
+    <div class="form-group">
+      Birthday:
+      <input class="form-control" formControlName="date" required name="bday" type="date" />
+      <div class="mt-2" *ngIf="(date.invalid && (date.dirty || date.touched))">
+          <div class="alert alert-danger">
+            date is required.
+          </div>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" name="submit">submit</button>
+  </form>
+  <br>
+</div>
