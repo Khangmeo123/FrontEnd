@@ -23,7 +23,8 @@ export class SignUpPage {
         return element(by.css('#formSignUp'));
     }
     getBtnSubmit(){
-        return element(by.css('#btnSubmit'))
+        // return element(by.css('#btnSubmit'))
+        return element(by.css("[data-qe-id='btnSubmit']"));
     }
 
 }
