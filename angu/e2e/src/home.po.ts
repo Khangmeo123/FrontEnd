@@ -8,28 +8,12 @@ export class HomePage {
     getTitleText() {
         return element(by.css('app-home h5')).getText();
     }
-
-    // test() {
-    //     // element(by.css('select option[value="/login"]')).click();
-    //     // browser.sleep(3000);
-
-    //     // element(by.css('select option[value="/contact"]')).click();
-    //     // browser.sleep(3000);
-
-    //     // element(by.css('select option[value="/sign-up"]')).click();
-    //     // browser.sleep(3000);
-
-    //     element(by.id('1')).click();
-    //     browser.sleep(1000);
-    //     element(by.id('2')).click();
-    //     browser.sleep(1000);
-    //     element(by.id('3')).click();
-    //     browser.sleep(1000);
-
-    // };
-
+    
+    getSelectBox(){
+        return element(by.id('selectBox'));
+    }
     getBirthday() {
-        return element(by.name('bday'));
+        return element(by.id('bday'));
     }
     getRadio1CheckBox() {
         return element(by.id('1'));

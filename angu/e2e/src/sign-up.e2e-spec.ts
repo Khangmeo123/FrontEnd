@@ -10,33 +10,33 @@ describe('Sign Up tests', () => {
         page.navigateTo();
         
     });
-    it('Sign up page should be invalid',()=>{
-        page.getNameTextBox().sendKeys('');
-        let form =  page.getForm().getAttribute('class');
-        expect(form).toContain('ng-invalid');
-    });
+    // it('Sign up page should be invalid',()=>{
+    //     page.getNameTextBox().sendKeys('');
+    //     let form =  page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-invalid');
+    // });
 
-    it('Sign up page should be invalid',()=>{
-        page.getEmailTextBox().sendKeys('');
-        let form =  page.getForm().getAttribute('class');
-        expect(form).toContain('ng-invalid');
-    });
+    // it('Sign up page should be invalid',()=>{
+    //     page.getEmailTextBox().sendKeys('');
+    //     let form =  page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-invalid');
+    // });
 
-    it('Sign up page should be invalid',()=>{
-        page.getPasswordTextBox().sendKeys('');
-        let form =  page.getForm().getAttribute('class');
-        expect(form).toContain('ng-invalid');
-    });
-    it('Sign up page should be invalid',()=>{
-        page.getAddressTextBox().sendKeys('');
-        let form =  page.getForm().getAttribute('class');
-        expect(form).toContain('ng-invalid');
-    });
-    it('Sign up page should be invalid',()=>{
-        page.getTelTextBox().sendKeys('');
-        let form =  page.getForm().getAttribute('class');
-        expect(form).toContain('ng-invalid');
-    });
+    // it('Sign up page should be invalid',()=>{
+    //     page.getPasswordTextBox().sendKeys('');
+    //     let form =  page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-invalid');
+    // });
+    // it('Sign up page should be invalid',()=>{
+    //     page.getAddressTextBox().sendKeys('');
+    //     let form =  page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-invalid');
+    // });
+    // it('Sign up page should be invalid',()=>{
+    //     page.getTelTextBox().sendKeys('');
+    //     let form =  page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-invalid');
+    // });
     it('Sign up page should be valid',()=>{
         page.getNameTextBox().sendKeys('Khang meo');
         page.getEmailTextBox().sendKeys('khangmeo@gmail.com');

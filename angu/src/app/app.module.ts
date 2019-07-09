@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { AppComponent } from './app.component';
-import { InputComponent } from './template/input/input.component';
+
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -24,10 +24,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DropdownModule} from 'primeng/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
     NavbarComponent,
     FooterComponent,
     AboutComponent,
@@ -40,13 +41,16 @@ import { LoginComponent } from './pages/login/login.component';
     SignUpComponent,
     InputPasswordComponent,
     HomeComponent
+   
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DropdownModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

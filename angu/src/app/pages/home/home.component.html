@@ -45,7 +45,7 @@
     <br>
     <div class="form-group">
       Birthday:
-      <input class="form-control" formControlName="date" required name="bday" type="date" />
+      <input class="form-control" formControlName="date" required id="bday" type="date" />
       <div class="mt-2" *ngIf="(date.invalid && (date.dirty || date.touched))">
           <div class="alert alert-danger">
             date is required.
