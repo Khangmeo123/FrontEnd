@@ -1,22 +1,22 @@
 <div class="container">
     
+
+
 <h3 class="first">Single</h3>
-<p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
-<p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p>
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" data-qe-id="dropdown1" optionLabel="name" [showClear]="true"></p-dropdown>
+<p> Selected City: {{selectedCity ? selectedCity.name : 'none'}} </p>
 
 <h3>Editable</h3>
-<p-dropdown [options]="cars" [(ngModel)]="selectedCar1" editable="true" placeholder="Select a Brand"></p-dropdown>
+<p-dropdown [options]="cars" [(ngModel)]="selectedCar1" editable="true" placeholder="Select a Brand" data-qe-id="dropdown2"></p-dropdown>
 <p>Selected Car: {{selectedCar1 || 'none'}}</p>
 
 <h3>Content with Filters</h3>
-<p-dropdown [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+<p-dropdown [options]="cars" [(ngModel)]="selectedCar2" filter="true" data-qe-id="dropdown3">
     <ng-template let-item pTemplate="selectedItem">
-       
-        <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+       <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
     </ng-template>
     <ng-template let-car pTemplate="item">
         <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
-            
             <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
         </div>
     </ng-template>
@@ -24,7 +24,7 @@
 <p>Selected Car: {{selectedCar2 || 'none'}}</p>
 
 <h3>Group</h3>
-<p-dropdown [options]="groupedCars" [(ngModel)]="selectedCar3" placeholder="Select a Car" [group]="true">
+<p-dropdown [options]="groupedCars" [(ngModel)]="selectedCar3" placeholder="Select a Car" [group]="true" data-qe-id="dropdown4">
     <ng-template let-group pTemplate="group">
         
         <span style="margin-left:.25em">{{group.label}}</span>
@@ -32,7 +32,7 @@
 </p-dropdown>
 <p>Selected Car: {{selectedCar3 || 'none'}}</p>
 
-<h3>Virtual Scroll (10000 Items)</h3>
+<!-- <h3>Virtual Scroll (10000 Items)</h3>
 <p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
 <br><br><br><b><br></b>
-</div>
+</div> -->

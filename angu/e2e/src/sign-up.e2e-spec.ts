@@ -37,17 +37,17 @@ describe('Sign Up tests', () => {
     //     let form =  page.getForm().getAttribute('class');
     //     expect(form).toContain('ng-invalid');
     // });
-    it('Sign up page should be valid',()=>{
-        page.getNameTextBox().sendKeys('Khang meo');
-        page.getEmailTextBox().sendKeys('khangmeo@gmail.com');
-        page.getPasswordTextBox().sendKeys('meomeomeo');
-        page.getAddressTextBox().sendKeys('hoang duong son cong ung hoa ha noi');
-        page.getTelTextBox().sendKeys('0929076099');
-        let form = page.getForm().getAttribute('class');
-        expect(form).toContain('ng-valid');
-        page.getBtnSubmit().click();
-        expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/login");
-    });
+    // it('Sign up page should be valid',()=>{
+    //     page.getNameTextBox().sendKeys('Khang meo');
+    //     page.getEmailTextBox().sendKeys('khangmeo@gmail.com');
+    //     page.getPasswordTextBox().sendKeys('meomeomeo');
+    //     page.getAddressTextBox().sendKeys('hoang duong son cong ung hoa ha noi');
+    //     page.getTelTextBox().sendKeys('0929076099');
+    //     let form = page.getForm().getAttribute('class');
+    //     expect(form).toContain('ng-valid');
+    //     page.getBtnSubmit().click();
+    //     expect(browser.getCurrentUrl()).toEqual("http://localhost:4200/login");
+    // });
 
 
 })
