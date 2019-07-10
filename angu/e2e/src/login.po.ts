@@ -20,4 +20,14 @@ export class LoginPage {
   getBtnGoSignUp(){
     return element(by.css('#btnGoSignUp'));
   }
+  // getFormControlName(){
+  //   return element(by.name('name'));
+  // }
+  getErrorName(){
+    return element(by.css("[data-qe-id='errorName']"));
+  }
+
+  getErrorPassword(){
+    return element(by.css("[data-qe-id = 'errorPassword']"));
+  }
 }

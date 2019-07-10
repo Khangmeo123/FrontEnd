@@ -1,5 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators,FormArray } from '@angular/forms';
+import { FormGroup, FormControl, Validators,FormArray, ValidatorFn, AbstractControl } from '@angular/forms';
+
+const validatePassword: ValidatorFn = (control: AbstractControl) : { [key : string]:  any } | null => {
+  if(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(control.value)){
+    return null;
+  }
+  return {
+    invalidPassword: (control.value) + ' is not a valid password, valid password need at lest 1 uppercase, 1 lowercase and 1 number',
+  };
+};
+const validateUsername: ValidatorFn = (control: AbstractControl) : { [key : string]:  any } | null => {
+  if(/^.{8,}$/.test(control.value)){
+    return null;
+  }
+  return {
+    invalidUsername: (control.value) + ' is short than 8 character',
+  };
+};
 
 @Component({
   selector: 'app-login',
@@ -9,8 +26,8 @@ import { FormGroup, FormControl, Validators,FormArray } from '@angular/forms';
 export class LoginComponent implements OnInit { 
 
   profile = new FormGroup({
-    name: new FormControl(null,Validators.required),
-    password: new FormControl(null,Validators.required)
+    name: new FormControl(null,[validateUsername]),
+    password: new FormControl(null,[validatePassword]),
   });
 
  get name(){
@@ -29,10 +46,10 @@ export class LoginComponent implements OnInit {
     if (this.profile.valid) {
       let name = this.profile.get('name').value;
       let password = this.profile.get('password').value;
-      if(name == "test" && password == "test"){
+      if(name == "khangmeo" && password == "khangmeo"){
         location.href='/home'
       } else{
-        alert('your name should is "test" and password too!')
+        alert('your name should is "khangmeo" and password too!')
       }
     }
     else {

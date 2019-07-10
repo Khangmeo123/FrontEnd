@@ -26,7 +26,9 @@ describe('About page tests', () => {
         // page.getdropdown4().click();
         // browser.sleep(3000);
         // page.getdropdown5().click();
-        browser.sleep(3000);
+        
+        
+        // browser.sleep(3000);
         
 
         // show editable 
@@ -44,10 +46,10 @@ describe('About page tests', () => {
         // page.getInputofContentFilters().sendKeys('a');
         // browser.sleep(5000);
 
-        page.getGroup().click();
-        browser.sleep(4000);
-        page.getdropdown1().click();
-        browser.sleep(5000);
+        // page.getGroup().click();
+        // browser.sleep(4000);
+        // page.getdropdown1().click();
+        // browser.sleep(5000);
 
 
     })
